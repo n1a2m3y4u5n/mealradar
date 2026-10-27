@@ -8,7 +8,7 @@ import { dirname, join } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const SCHOOLS_PATH = join(__dirname, '../../src/data/mockSchools.js')
-const API_KEY = process.env.SCHOOLINFO_API_KEY || 'ce5233d8c61d450197ffb827548cfac5'
+const API_KEY = process.env.SCHOOLINFO_API_KEY || ''
 
 // NEIS regionCode → schoolinfo sidoCode
 const SIDO_MAP = {

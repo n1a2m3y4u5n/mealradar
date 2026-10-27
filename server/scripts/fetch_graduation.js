@@ -12,7 +12,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const API_KEY = 'ce5233d8c61d450197ffb827548cfac5'
+const API_KEY = process.env.SCHOOLINFO_API_KEY || ''
 const PBAN_YR = 2024  // 2025 공시 미완 → 2024
 const DELAY_MS = 100
 

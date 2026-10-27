@@ -3,7 +3,7 @@ import { mockMeals } from '../data/mockMeals.js'
 import { fmtDateYMD } from '../utils/formatters.js'
 
 const NEIS_BASE = 'https://open.neis.go.kr/hub'
-const API_KEY   = import.meta.env.VITE_NEIS_API_KEY || '3f24c3dc382741bbbc163fc82473623c'
+const API_KEY   = import.meta.env.VITE_NEIS_API_KEY || ''
 
 export async function fetchMealData(regionCode, schoolCode, date) {
   const url = `${NEIS_BASE}/mealServiceDietInfo?` + new URLSearchParams({

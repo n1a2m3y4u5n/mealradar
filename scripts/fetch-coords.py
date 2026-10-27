@@ -4,11 +4,7 @@ LA(위도), LO(경도) 필드 사용
 """
 import re, json, time, os, urllib.request, urllib.parse
 
-API_KEYS = [
-    '3f24c3dc20a04ae193daecb4ba5e88c2',
-    '90bef23c5a444028ada99a6de1ee8bf1',
-    'd143fea5bf9e4f4da64a3a6a4c93f1e8',
-]
+API_KEYS = os.environ.get('NEIS_API_KEYS', '').split(',')
 BASE = 'https://open.neis.go.kr/hub/schoolInfo'
 CKPT = '/Users/namyunsu/Downloads/mealradar/scripts/coords_checkpoint.json'
 JS_FILE = '/Users/namyunsu/Downloads/mealradar/src/data/mockSchools.js'

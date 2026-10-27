@@ -10,12 +10,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const NEIS_KEYS = [
-  '3f24c3dc382741bbbc163fc82473623c',
-  '90bef23c145e47349e3c5e186f56b336',
-  'd143fea5002e4fc8a580a4ae3b322b67',
-  '0405582e2e9d4840b4ae1aa8fc4a0e39',
-]
+const NEIS_KEYS = (process.env.NEIS_API_KEYS || '').split(',')
 let keyIdx = 0
 const nextKey = () => { const k = NEIS_KEYS[keyIdx % NEIS_KEYS.length]; keyIdx++; return k }
 

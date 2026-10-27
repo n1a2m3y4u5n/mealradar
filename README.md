@@ -41,6 +41,8 @@ NEIS_API_KEY=
 ANTHROPIC_API_KEY=
 ```
 
+데이터 수집 스크립트(`scripts/`, `server/scripts/`)는 `NEIS_API_KEYS`(쉼표로 여러 개)와 학교알리미 `SCHOOLINFO_API_KEY` 환경변수를 씁니다.
+
 ```bash
 npm run dev:all      # Vite 개발 서버(프런트)와 Express 서버(:3001)를 함께 실행
 ```

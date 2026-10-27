@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import re, json, time, urllib.request, urllib.parse
+import re, json, time, urllib.request, urllib.parse, os
 
-NEIS_KEYS = ['3f24c3dc382741bbbc163fc82473623c', '90bef23c145e47349e3c5e186f56b336']
+NEIS_KEYS = os.environ.get('NEIS_API_KEYS', '').split(',')
 _ki = 0
 def neis_key():
     global _ki; k = NEIS_KEYS[_ki % len(NEIS_KEYS)]; _ki += 1; return k

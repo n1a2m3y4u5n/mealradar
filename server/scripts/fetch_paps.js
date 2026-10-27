@@ -9,7 +9,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const API_KEY = 'ce5233d8c61d450197ffb827548cfac5'
+const API_KEY = process.env.SCHOOLINFO_API_KEY || ''
 const API_URL = 'https://www.schoolinfo.go.kr/openApi.do'
 const PBAN_YR = 2025
 const DELAY_MS = 300 // 초당 ~3req

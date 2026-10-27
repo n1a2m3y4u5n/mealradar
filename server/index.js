@@ -25,10 +25,10 @@ if (existsSync(distPath)) {
 }
 
 const NEIS_KEYS = [
-  process.env.NEIS_API_KEY  || '3f24c3dc382741bbbc163fc82473623c',
-  process.env.NEIS_API_KEY2 || '90bef23c145e47349e3c5e186f56b336',
-  process.env.NEIS_API_KEY3 || 'd143fea5002e4fc8a580a4ae3b322b67',
-  process.env.NEIS_API_KEY4 || '0405582e2e9d4840b4ae1aa8fc4a0e39',
+  process.env.NEIS_API_KEY  || '',
+  process.env.NEIS_API_KEY2 || '',
+  process.env.NEIS_API_KEY3 || '',
+  process.env.NEIS_API_KEY4 || '',
 ].filter(Boolean)
 let _keyIdx = 0
 const nextNeisKey = () => { const k = NEIS_KEYS[_keyIdx % NEIS_KEYS.length]; _keyIdx++; return k }

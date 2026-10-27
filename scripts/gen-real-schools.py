@@ -2,9 +2,9 @@
 """
 NEIS에서 전국 고등학교 전체를 가져와 mockSchools.js를 새로 생성합니다.
 """
-import re, json, time, math, urllib.request, urllib.parse, random
+import re, json, time, math, urllib.request, urllib.parse, random, os
 
-NEIS_KEYS = ['3f24c3dc382741bbbc163fc82473623c', '90bef23c145e47349e3c5e186f56b336']
+NEIS_KEYS = os.environ.get('NEIS_API_KEYS', '').split(',')
 _ki = 0
 def neis_key():
     global _ki
